@@ -28,7 +28,7 @@ spec:
       name: weather-ui
     spec:
       containers:
-      - image: {{image}}
+      - image: {{chinmaydc/weather-ui}}
         imagePullPolicy: IfNotPresent
         name: weather-ui
         ports:
