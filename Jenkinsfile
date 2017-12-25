@@ -19,6 +19,8 @@ podTemplate(label: 'docker',
       }
       container('kubectl') {
            sh "kubectl get nodes"
+           sh "kubectl create -f service.yaml"
+           sh "kubectl create -f deployment.yaml"
    }
   }
  }
