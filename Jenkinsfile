@@ -19,6 +19,7 @@ podTemplate(label: 'docker',
       }
       container('kubectl') {
            sh "kubectl get nodes"
+           sh "ls -ltr"
            sh "kubectl create -f deployment.json"
    }
   }
