@@ -21,6 +21,8 @@ podTemplate(label: 'docker',
            sh "kubectl get nodes"
            sh "ls -ltr"
            sh "pwd"
+           sh "kubectl create -f service.yaml"
+           sh "kubectl create -f deployment.yaml"
    }
   }
  }
