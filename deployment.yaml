@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: weather-ui
-    name: weather-ui
+    app: weather-ui2
+    name: weather-ui2
     type: web
-  name: weather-ui
+  name: weather-ui2
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: weather-ui
-      name: weather-ui
+      app: weather-ui2
+      name: weather-ui2
       type: web
   strategy:
     rollingUpdate:
@@ -22,15 +22,15 @@ spec:
   template:
     metadata:
       labels:
-        app: weather-ui
-        name: weather-ui
+        app: weather-ui2
+        name: weather-ui2
         type: web
-      name: weather-ui
+      name: weather-ui2
     spec:
       containers:
-      - image: chinmaydc/weather-ui
+      - image: chinmaydc/weather-ui:1
         imagePullPolicy: IfNotPresent
-        name: weather-ui
+        name: weather-ui2
         ports:
         - containerPort: 5000
       dnsPolicy: ClusterFirst
