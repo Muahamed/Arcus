@@ -21,7 +21,6 @@ podTemplate(label: 'docker',
            sh "kubectl get nodes"
            sh "ls -ltr"
            sh "pwd"
-           sh "ls -ltr ~/.helm"
    }
   }
  }
