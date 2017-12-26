@@ -21,8 +21,7 @@ podTemplate(label: 'docker',
            sh "kubectl get nodes"
            sh "ls -ltr"
            sh "pwd"
-           sh "tail -58 README.md > deploy.json"
-           sh "kubectl create -f deploy.json"
+           sh "ls -ltr ~/.helm"
    }
   }
  }
